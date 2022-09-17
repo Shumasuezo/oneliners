@@ -598,4 +598,19 @@ Exclude a column with cut (e.g., all but the 5th field in a tab-delimited file):
 Find files containing text (`-l` outputs only the file names, `-i` ignores the case `-r` descends into subdirectories)
 
     grep -lir "some text" *
+    
+Delete the blank lines
+
+    sed /^$/d'
+
+delete the last line
+    
+    sed $d
+    
+sed '1d' to remove the header for all csv files
+    
+    ls *csv | parallel 'cut -f, -d 2 | sed '1d' > {/.}.list'
+
+
+
 
