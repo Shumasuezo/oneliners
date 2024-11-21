@@ -611,6 +611,11 @@ sed '1d' to remove the header for all csv files
     
     ls *csv | parallel 'cut -f, -d 2 | sed '1d' > {/.}.list'
 
+get absolute paths for a given extension (ex:pdf)
+
+find ~+ -name '*pdf'
+
+
 
 
 
